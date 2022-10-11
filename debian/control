@@ -1,0 +1,35 @@
+Source: libnet-dbus-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: intrigeri <intrigeri@debian.org>,
+           Xavier Guimard <yadd@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 12),
+               libdbus-1-dev,
+               libtest-pod-coverage-perl <!nocheck>,
+               libtest-pod-perl <!nocheck>,
+               libxml-twig-perl <!nocheck>,
+               perl-xs-dev,
+               perl:native
+Standards-Version: 4.4.1
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libnet-dbus-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libnet-dbus-perl.git
+Homepage: https://metacpan.org/release/Net-DBus
+
+Package: libnet-dbus-perl
+Architecture: any
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends},
+         libxml-twig-perl
+Description: Perl extension for the DBus bindings
+ Net::DBus provides a Perl API for the DBus message system. The DBus Perl
+ interface is currently operating against the 0.32 development version of
+ DBus, but should work with later versions too, providing the API changes have
+ not been too drastic.
+ .
+ Users of this package are either typically, service providers in which case
+ the Net::DBus::Service and Net::DBus::Object modules are of most relevance,
+ or are client consumers, in which case Net::DBus::RemoteService and
+ Net::DBus::RemoteObject are of most relevance.
